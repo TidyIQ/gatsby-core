@@ -33,6 +33,7 @@ module.exports = {
       resolve: `gatsby-plugin-layout` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-layout */,
       options: {
         component: require.resolve(
+          __dirname,
           `node_modules`,
           `@tidyiq`,
           `gatsby-core`,

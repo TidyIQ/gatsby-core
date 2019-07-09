@@ -1,6 +1,6 @@
 {
   "name": "@tidyiq/gatsby-core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Core template for Gatsby powered websites",
   "main": "index.js",
   "repository": {
