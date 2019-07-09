@@ -32,7 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-layout */,
       options: {
-        component: require.resolve(`../../contexts/index.js`)
+        component: require.resolve(
+          `node_modules`,
+          `@tidyiq`,
+          `gatsby-core`,
+          `contexts`,
+          `index.js`
+        )
       }
     },
     `gatsby-plugin-material-ui` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-material-ui/ */,
@@ -68,7 +74,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem` /* See: https://www.gatsbyjs.org/packages/gatsby-source-filesystem/ */,
       options: {
         name: `images`,
-        path: path.join(process.cwd(), `src`, `images`)
+        path: path.join(__dirname, `src`, `images`)
       }
     }
   ]
