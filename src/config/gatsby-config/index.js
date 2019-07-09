@@ -24,6 +24,12 @@ const gatsbyConfig = {
    */
   plugins: [
     {
+      resolve: `gatsby-plugin-compile-es6-packages` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-compile-es6-packages/ */,
+      options: {
+        modules: [`@tidyiq/gatsby-core`]
+      }
+    },
+    {
       resolve: `gatsby-plugin-layout` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-layout */,
       options: {
         component: require.resolve(`../../contexts/index.js`)

@@ -1,6 +1,6 @@
 {
   "name": "@tidyiq/gatsby-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core template for Gatsby powered websites",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,6 @@
     "@material-ui/styles": "^4.2.0",
     "@tidyiq/eslint-config": "^2.0.2",
     "eslint": "^5.16.0",
-    "gatsby": "^2.13.8",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-manifest": "^2.2.1",
     "gatsby-plugin-material-ui": "^2.1.4",
@@ -39,5 +38,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.8"
   }
 }
