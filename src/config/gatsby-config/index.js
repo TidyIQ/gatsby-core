@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/camelcase */
 
 /**
  * Configure site with this file.
@@ -6,9 +6,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-import path from "path";
+const path = require("path");
 
-const gatsbyConfig = {
+module.exports = {
   /**
    * Site meta data
    *
@@ -73,5 +73,3 @@ const gatsbyConfig = {
     }
   ]
 };
-
-export default gatsbyConfig;
