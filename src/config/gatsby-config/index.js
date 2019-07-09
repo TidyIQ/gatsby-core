@@ -23,14 +23,25 @@ module.exports = {
    * See: https://www.gatsbyjs.org/plugins/
    */
   plugins: [
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-compile-es6-packages/ */
     {
-      resolve: `gatsby-plugin-compile-es6-packages` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-compile-es6-packages/ */,
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-compile-es6-packages`
+      ),
       options: {
         modules: [`@tidyiq/gatsby-core`]
       }
     },
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-layout */
     {
-      resolve: `gatsby-plugin-layout` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-layout */,
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-layout`
+      ),
       options: {
         component: require.resolve(
           __dirname,
@@ -42,10 +53,32 @@ module.exports = {
         )
       }
     },
-    `gatsby-plugin-material-ui` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-material-ui/ */,
-    `gatsby-plugin-offline` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-offline/ */,
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-material-ui/ */
     {
-      resolve: `gatsby-plugin-manifest` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/ */,
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-material-ui`
+      )
+    },
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-offline/ */
+    {
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-offline`
+      )
+    },
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/ */
+    {
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-manifest`
+      ),
       options: {
         name: `GatsbyJS`, // USER CONFIG
         short_name: `GatsbyJS`, // USER CONFIG
@@ -57,25 +90,60 @@ module.exports = {
         theme_color_in_head: false
       }
     },
-    `gatsby-plugin-react-helmet` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/ */,
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/ */
+    {
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-react-helmet`
+      )
+    },
+
     /**
      * 'gatsby-transformer-sharp' and 'gatsby-plugin-sharp' required by 'gatsby-image'
      *
      * See: https://www.gatsbyjs.org/docs/gatsby-image/
+     * See: https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/
+     * See: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
      */
-    `gatsby-transformer-sharp` /* See: https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/ */,
     {
-      resolve: `gatsby-plugin-sharp` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/ */,
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-transformer-sharp`
+      )
+    },
+    {
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-sharp`
+      ),
       options: {
         useMozJpeg: true
       }
     },
-    `gatsby-plugin-typescript` /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/ */,
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/ */
     {
-      resolve: `gatsby-source-filesystem` /* See: https://www.gatsbyjs.org/packages/gatsby-source-filesystem/ */,
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-plugin-typescript`
+      )
+    },
+
+    /* See: https://www.gatsbyjs.org/packages/gatsby-source-filesystem/ */
+    {
+      resolve: require.resolve(
+        __dirname,
+        `node_modules`,
+        `gatsby-source-filesystem`
+      ),
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `images`)
+        path: path.resolve(__dirname, `src`, `images`)
       }
     }
   ]
