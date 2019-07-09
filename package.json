@@ -1,0 +1,80 @@
+{
+  "name": "@tidyiq/gatsby-core",
+  "version": "0.0.1",
+  "description": "Core template for Gatsby powered websites",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TidyIQ/gatsby-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TidyIQ/gatsby-core/issues"
+  },
+  "homepage": "https://github.com/TidyIQ/gatsby-core#readme",
+  "author": "Jake Clayton",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "@tidyiq",
+    "rules": {
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ]
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "{*.{json,md}}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "hooks": {
+    "pre-commit": [
+      "npm run type-check && lint-staged"
+    ]
+  },
+  "scripts": {
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "npm run lint --fix",
+    "type-check": "tsc --noEmit",
+    "build": "npm run lint:fix && prettier --write src/**/*.{json,md} && rimraf ./dist && tsc -d && copyfiles -u 2 ./src/config/**/* ./dist/config && copyfiles -u 1 ./src/package.json ./src/package-lock.json ./dist"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/styles": "^4.2.0",
+    "@tidyiq/eslint-config": "^2.0.2",
+    "eslint": "^5.16.0",
+    "gatsby": "^2.13.8",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-layout": "^1.1.0",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-material-ui": "^2.1.4",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-plugin-sitemap": "^2.2.1",
+    "gatsby-plugin-typescript": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.3"
+  }
+}

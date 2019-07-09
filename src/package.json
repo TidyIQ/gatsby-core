@@ -1,0 +1,43 @@
+{
+  "name": "@tidyiq/gatsby-core",
+  "version": "0.0.1",
+  "description": "Core template for Gatsby powered websites",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TidyIQ/gatsby-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TidyIQ/gatsby-core/issues"
+  },
+  "homepage": "https://github.com/TidyIQ/gatsby-core#readme",
+  "author": "Jake Clayton",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "@tidyiq"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/styles": "^4.2.0",
+    "@tidyiq/eslint-config": "^2.0.2",
+    "eslint": "^5.16.0",
+    "gatsby": "^2.13.8",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-material-ui": "^2.1.4",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-plugin-sitemap": "^2.2.1",
+    "gatsby-plugin-typescript": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "typescript": "^3.5.3"
+  }
+}
